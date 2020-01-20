@@ -1,1 +1,64 @@
-<h1>Olá</h1>
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+</head>
+
+<body>
+    <header>
+            <div class='caixa'>
+            <h1><img src="{% static 'img/guitar.jpg' %}"></h1>
+            <nav>
+                <ul>
+                    <li><a href='index.html'>Home</a></li>
+                    <li><a href='listademusicas.html'>Lista de Músicas</a></li>
+                    <li><a href='contato.html'>Contato</a></li>
+                    <li><a href="{% url 'teladelogin' %}">Login</a></li>
+                </ul>
+        </nav>
+        </div>
+
+    </header>
+    <main>
+        <ul class= 'jogos'>
+            <li>
+                <h2>POP</h2>
+            <img src="{% static 'img/pop.jpg' %}">
+            <p class='descricao'>Escutando: </p>
+            </li>
+                <li>
+                    <h2>ROCK</h2>
+                <img src="{% static 'img/rock.jpg' %}">
+                <p class='descricao'>Escutando: </p>
+                </li>
+                    <li>
+                        <h2>ELETRONICA</h2>
+                    <img src="{% static 'img/eletronica.jpg' %}">
+                    <p class='descricao'>Escutando: </p>
+                    </li>
+                    <li>
+                        <h2>REGGAE</h2>
+                    <img src="{% static 'img/reggae.jpg' %}">
+                    <p class='descricao'>Escutando: </p>
+                    </li>
+                    <li>
+                        <h2>HIP-HOP/RAP</h2>
+                    <img src="{% static 'img/hip-hop.jpg' %}">
+                    <p class='descricao'>Escutando: </p>
+                    </li>
+                    <li>
+                        <h2>SOUNDTRACK</h2>
+                    <img src="{% static 'img/soundtrack.jpg' %}">
+                    <p class='descricao'>Escutando: </p>
+                    </li>
+
+
+
+        </ul>
+    </main>
+</body>
+
+</html>
