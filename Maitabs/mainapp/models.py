@@ -2,7 +2,6 @@ from django.db import models
 
 class Musica(models.Model):
     nome = models.CharField(max_length=70)
-    banda = models.CharField(max_length=70)
     artista = models.ForeignKey('Artista', on_delete=models.CASCADE)
     genero = models.ForeignKey('Genero', on_delete=models.CASCADE)
     album = models.ForeignKey('Album', on_delete=models.CASCADE)

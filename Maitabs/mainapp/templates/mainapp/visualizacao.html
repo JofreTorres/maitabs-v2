@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/visualizacao.css' %}">
+</head>
+
+<body>
+    <header>
+            <div class='caixa'>
+            <h1><img id="logo" src="{% static 'img/guitar.jpg' %}"></h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'listademusicas' %}">Lista de Músicas</a></li>
+                    <li><a href='contato.html'>Contato</a></li>
+                    <li><a href="{% url 'teladelogin' %}">Login</a></li>
+                    <li><a href="{% url 'profile' %}">Profile</a></li>
+                </ul>
+        </nav>
+        </div>
+    </header>
+
+            <main>
+                <div class="video">
+                    video
+                </div>
+            </main>
+</body>
+</html>

@@ -7,7 +7,7 @@ botaoAdicionar.addEventListener("click", function(event){
     var nome = form.nome.value;
     var banda = form.banda.value;
     var genero = form.genero.value;
-    var album = form.album.value;
+    var escutando = form.album.value;
 
     var musicaTr = document.createElement("tr");
 
@@ -15,11 +15,13 @@ botaoAdicionar.addEventListener("click", function(event){
     var bandaTd = document.createElement("td");
     var generoTd = document.createElement("td");
     var albumTd = document.createElement("td");
+    var escutandoTd = document.createElement("td");
 
     nomeTd.textContext = nome;
     bandaTd.textContext = banda;
     generoTd.textContext = genero;
     albumTd.textContext = album;
+    escutandoTd.textContext = escutando;
 
     musicaTr.appendChild(nomeTd, bandaTd, generoTd, albumTd);
 

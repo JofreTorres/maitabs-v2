@@ -1,13 +1,12 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Lista de Músicas</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/listademusicas.css' %}">
-    <script src="{% static 'js/listademusicas.js' %}"></script>
-
+<meta charset="UTF-8">
+<title>Title of the document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/listapop.css' %}">
 </head>
+
 <body>
     <header>
             <div class='caixa'>
@@ -18,13 +17,14 @@
                     <li><a href="{% url 'listademusicas' %}">Lista de Músicas</a></li>
                     <li><a href='contato.html'>Contato</a></li>
                     <li><a href="{% url 'teladelogin' %}">Login</a></li>
+                    <li><a href="{% url 'profile' %}">Profile</a></li>
                 </ul>
         </nav>
         </div>
 
     </header>
 
-        <main>
+<main>
             <input class="search-bar"><!--<img src="{% static 'img/lupa.jpg'%}" class="lupa">-->
             <h2>Lista de Músicas</h2>
 
@@ -146,40 +146,34 @@
                 </tr>
                 </tbody>
             </table>
+         <form id="form-adiciona">
+             <h1>Adicionar Música</h1>
+             <div>
+                <label>Nome da Música: </label>
+                <input name="nome" type="text" placeholder="Digite o nome da música...">
+            </div>
+             <div>
+                <label>Banda: </label>
+                <input name="banda" type="text" placeholder="Digite o nome da banda...">
+            </div>
+             <div>
+                <label>Gênero: </label>
+                <input name="genero" type="text" placeholder="Digite o gênero...">
+            </div>
+             <div>
+                <label>Álbum: </label>
+                <input name="album" type="text" placeholder="Digite o nome do álbum...">
+            </div>
+             <button id="adicionar-musica" class="botao bto-principal">Adicionar</button>
+         </form>
+
 
         </main>
-
-    <div class="adicionarmusica">
-             <h1>Adicionar Música</h1>
-
-                <label>Nome da Música: </label>
-                <input name="nome" type="text" placeholder="Digite o nome da música..."><br>
-                <label>Banda: </label>
-                <input name="banda" type="text" placeholder="Digite o nome da banda..."><br>
-                <label>Gênero: </label>
-                <input name="genero" type="text" placeholder="Digite o gênero..."><br>
-                <label>Álbum: </label>
-                <input name="album" type="text" placeholder="Digite o nome do álbum..."><br>
-
-             <button id="adicionar-musica" class="botao bto-principal">Adicionar</button>
-         </div>
-
-    <div>
-        <h1>Editar Música</h1>
-        <label>Nome da Música: </label>
-                <input name="nome" type="text" placeholder="Digite o nome da música..."><br>
-                <label>Banda: </label>
-                <input name="banda" type="text" placeholder="Digite o nome da banda..."><br>
-                <label>Gênero: </label>
-                <input name="genero" type="text" placeholder="Digite o gênero..."><br>
-                <label>Álbum: </label>
-                <input name="album" type="text" placeholder="Digite o nome do álbum..."><br>
-
-    </div>
     <footer>
             <p>Contato:</p>
             <p>Whatsapp: 781222</p>
             <p>E-mail: contato@gmail.com</p>
     </footer>
+
 </body>
 </html>

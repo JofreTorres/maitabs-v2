@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}">
+</head>
+
+<body>
+    <header>
+            <div class='caixa'>
+            <h1><img id="logo" src="{% static 'img/guitar.jpg' %}"></h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'listademusicas' %}">Lista de Músicas</a></li>
+                    <li><a href='contato.html'>Contato</a></li>
+                    <li><a href="{% url 'teladelogin' %}">Login</a></li>
+                    <li><a href="{% url 'profile' %}">Profile</a></li>
+                </ul>
+        </nav>
+        </div>
+    </header>
+    <div class="profile-body">
+    <form class="dados-perfil">
+        <p>Foto de Perfil</p>
+        <img class="foto-perfil" src="{% static 'img/itachi.jpg' %}">
+        <p>Nome do Usuário</p>
+        <strong>RealLifeItachi</strong>
+        <p>Nome Completo</p>
+        <strong>Jofre Torres Tristão</strong>
+        <p>E-mail</p>
+        <strong>itiolpz@gmail.com</strong>
+        <p>Playlists criadas</p>
+        <button id="show-hide-playlist" class="show-hide-playlist">Primeira playlist</button>
+    </form>
+            <main class="criacao-playlist">
+                <p>Nome da playlist:</p><input>
+                <p>Nome da música:</p><input list="musicas">
+                <datalist id="musicas">
+                    <option value="Musica1"></option>
+                    <option value="sasafadfas"></option>
+                </datalist>
+                <p>Banda:</p><input>
+                <p>Gênero:</p><select name="generos">
+                <option value="Pop">Pop</option>
+                <option value="Pop">Rock</option>
+                <option value="Pop">Eletrônica</option>
+                <option value="Pop">Reggae</option>
+                <option value="Pop">Hip-Hop/Rap</option>
+                <option value="Pop">Soundtrack</option>
+                </select>
+                <p>Álbum:</p><input><br><br>
+                <label>Pública</label>
+                <input type="checkbox">
+                <label>Privada</label>
+                <input type="checkbox"><br><br>
+                <button id="criar-playlist" class="criar-playlist">Criar playlist</button><br>
+            </main>
+
+                <div class="editar-playlist">
+                    <p>Playlists criadas:</p><input>
+                    <p>Nome da música:</p><input>
+                    <p>Banda:</p><input>
+                    <p>Gênero:</p><input>
+                    <p>Álbum:</p><input><br><br>
+                    <button id="confirmar-edit" class="confirmar-edit">Confirmar</button><br>
+                </div>
+
+        <div>
+        <h1 class="titulo-playlists-criadas">Playlists Criadas Pelo Usuário</h1>
+        <table class="lista">
+                <thead>
+                <tr class="musica">
+                    <th>Nome</th>
+                    <th>Gênero</th>
+                    <th>Escutando</th>
+                </tr>
+                </thead>
+                <tbody id="tabela-musicas">
+                <tr class="musica">
+                    <td class="info-nome-playlist">Playlist Nostalgia</td>
+                    <td class="info-genero">Rock</td>
+                    <td class="info-escutando">0</td>
+                </tr>
+
+                </tbody>
+            </table>
+    </div>
+
+        </div>
+
+
+
+  <footer>
+            <p>Contato:</p>
+            <p>Whatsapp: 781222</p>
+            <p>E-mail: contato@gmail.com</p>
+    </footer>
+
+
+
+</body>
+</html>
