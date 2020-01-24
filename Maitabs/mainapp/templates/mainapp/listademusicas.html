@@ -11,7 +11,7 @@
 <body>
     <header>
             <div class='caixa'>
-            <h1><img src="{% static 'img/guitar.jpg' %}"></h1>
+            <img src="{% static 'img/guitar.jpg' %}">
             <nav>
                 <ul>
                     <li><a href="{% url 'home' %}">Home</a></li>
@@ -60,111 +60,37 @@
                     <td class="info-album">0</td>
                     <td class="info-escutando">0</td>
                 </tr>
-                 <tr class="musica">
-                    <td class="info-nome">Sliver</td>
-                     <td class="info-banda">Nirvana</td>
-                    <td class="info-genero">Rock</td>
-                    <td class="info-album">0</td>
-                    <td class="info-escutando">0</td>
-                </tr>
-                <tr class="musica">
-                    <td class="info-nome">Patience</td>
-                    <td class="info-banda">Guns N' Roses</td>
-                    <td class="info-genero">Rock</td>
-                    <td class="info-album">0</td>
-                    <td class="info-escutando">0</td>
-                </tr>
-                <tr class="musica">
-                    <td class="info-nome">Numb</td>
-                    <td class="info-banda">Linkin Park</td>
-                    <td class="info-genero">Rock</td>
-                    <td class="info-album">0</td>
-                    <td class="info-escutando">0</td>
-                </tr>
-                <tr class="musica">
-                    <td class="info-nome">In the End</td>
-                    <td class="info-banda">Linkin Park</td>
-                    <td class="info-genero">Rock</td>
-                    <td class="info-album">0</td>
-                    <td class="info-escutando">0</td>
-                </tr>
-                <tr class="musica">
-                    <td class="info-nome">Castle Of Glass</td>
-                    <td class="info-banda">Linkin Park</td>
-                    <td class="info-genero">Rock</td>
-                    <td class="info-album">0</td>
-                    <td class="info-escutando">0</td>
-                </tr>
-                <tr class="musica">
-                    <td class="info-nome">What I've Done</td>
-                    <td class="info-banda">Linkin Park</td>
-                    <td class="info-genero">Rock</td>
-                    <td class="info-album">0</td>
-                    <td class="info-escutando">0</td>
-                </tr>
-                <tr class="musica">
-                    <td class="info-nome">Waiting For The End</td>
-                    <td class="info-banda">Linkin Park</td>
-                    <td class="info-genero">Rock</td>
-                    <td class="info-album">0</td>
-                    <td class="info-escutando">0</td>
-                </tr>
-                <tr class="musica">
-                    <td class="info-nome">Leave Out All The Rest</td>
-                    <td class="info-banda">Linkin Park</td>
-                    <td class="info-genero">Rock</td>
-                    <td class="info-album">0</td>
-                    <td class="info-escutando">0</td>
-                </tr>
-                <tr class="musica">
-                    <td class="info-nome">The Pretender</td>
-                    <td class="info-banda">Foo Fighters</td>
-                    <td class="info-genero">Rock</td>
-                    <td class="info-album">0</td>
-                    <td class="info-escutando">0</td>
-                </tr>
-                <tr class="musica">
-                    <td class="info-nome">Walk</td>
-                    <td class="info-banda">Foo Fighters</td>
-                    <td class="info-genero">Rock</td>
-                    <td class="info-album">0</td>
-                    <td class="info-escutando">0</td>
-                </tr>
-                <tr class="musica">
-                    <td class="info-nome">Best Of You</td>
-                    <td class="info-banda">Foo Fighters</td>
-                    <td class="info-genero">Rock</td>
-                    <td class="info-album">0</td>
-                    <td class="info-escutando">0</td>
-                </tr>
-                <tr class="musica">
-                    <td class="info-nome">My Hero</td>
-                    <td class="info-banda">Foo Fighters</td>
-                    <td class="info-genero">Rock</td>
-                    <td class="info-album">0</td>
-                    <td class="info-escutando">0</td>
-                </tr>
+
                 </tbody>
             </table>
 
         </main>
 
-    <div class="adicionarmusica">
-             <h1>Adicionar Música</h1>
 
-                <label>Nome da Música: </label>
-                <input name="nome" type="text" placeholder="Digite o nome da música..."><br>
-                <label>Banda: </label>
-                <input name="banda" type="text" placeholder="Digite o nome da banda..."><br>
-                <label>Gênero: </label>
-                <input name="genero" type="text" placeholder="Digite o gênero..."><br>
-                <label>Álbum: </label>
-                <input name="album" type="text" placeholder="Digite o nome do álbum..."><br>
+        <form class="addmusica">
+            <h1>Adicionar Música</h1>
+            <div class="grupo">
+            <label>Nome da Música: </label>
+            <input name="nome" type="text" placeholder="Digite o nome da música..."><br>
+            </div>
+            <div class="grupo">
+            <label>Banda: </label>
+            <input name="banda" type="text" placeholder="Digite o nome da banda..."><br>
+            </div>
+            <div class="grupo">
+            <label>Gênero: </label>
+            <input name="genero" type="text" placeholder="Digite o gênero..."><br>
+            </div>
+            <div class="grupo">
+            <label>Álbum: </label>
+            <input name="album" type="text" placeholder="Digite o nome do álbum..."><br>
+            </div>
 
              <button id="adicionar-musica" class="botao bto-principal">Adicionar</button>
-         </div>
+         </form>
 
-    <div>
+
+        <form class="edit-musica">
         <h1>Editar Música</h1>
         <label>Nome da Música: </label>
                 <input name="nome" type="text" placeholder="Digite o nome da música..."><br>
@@ -175,7 +101,10 @@
                 <label>Álbum: </label>
                 <input name="album" type="text" placeholder="Digite o nome do álbum..."><br>
 
-    </div>
+            <button id="edit-musica" class="botao bto-principal2">Confirmar</button>
+            </form>
+
+
     <footer>
             <p>Contato:</p>
             <p>Whatsapp: 781222</p>

@@ -13,25 +13,25 @@ class Usuario(models.Model):
     nome = models.CharField(max_length=70)
 
     def __str__(self):
-        return "%s %s" % (self.id, self.nome)
+        return "%s %s" % (self.nome)
 
 class Artista(models.Model):
     nome = models.CharField(max_length=70)
 
     def __str__(self):
-        return "%s %s" % (self.id, self.nome)
+        return "%s %s" % (self.nome)
 
 class Album(models.Model):
     nome = models.CharField(max_length=70)
 
     def __str__(self):
-        return "%s %s" % (self.id, self.nome)
+        return "%s %s" % (self.nome)
 
 class Genero(models.Model):
     nome = models.CharField(max_length=70)
 
     def __str__(self):
-        return "%s %s" % (self.id, self.nome)
+        return "%s %s" % (self.nome)
 
 class Playlist(models.Model):
     nome = models.CharField(max_length=70)

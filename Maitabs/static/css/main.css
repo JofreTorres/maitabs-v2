@@ -1,0 +1,78 @@
+body{
+    background-color: #4F4F4F;
+}
+
+p{
+    font-size: 20px;
+}
+header{
+    background-color: gray;
+}
+
+a:hover{
+    color: orange;
+}
+
+.caixa{
+    position: relative;
+    width: 1500px;
+}
+
+nav{
+    position: absolute;
+    top: 110px;
+    right: 110px;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+img{
+    width: 200px;
+}
+
+.jogos{
+    width: 850px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.jogos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+.jogos li:hover{
+    border-color: orange;
+    font-size: 20px;
+}
+
+.jogos li:active{
+    border-color: teal;
+}
+
+.jogos li:hover h2{
+    border-color: orange;
+    font-size: 20px;
+}
+
+.descricao {
+    margin-top: 10px;
+}
