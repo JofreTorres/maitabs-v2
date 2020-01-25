@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 
     # APPS CUSTOMIZÁVEIS
     'apps.mainapp',
-    'apps.genero',
+    'apps.generos',
 ]
 
 MIDDLEWARE = [
@@ -74,7 +74,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Maitabs.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
@@ -86,6 +85,9 @@ DATABASES = {
         'PASSWORD': 'root',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
+        'OPTIONS': {
+            "init_command": "SET foreign_key_checks = 0;",
+         },
     }
 }
 

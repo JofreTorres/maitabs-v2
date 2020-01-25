@@ -8,9 +8,9 @@ urlpatterns = [
     path('profile', views.profile, name='profile'),
     path('visualizacao', views.visualizacao, name='visualizacao'),
     path('listapop', views.listapop, name='listapop'),
-path('listarock', views.listarock, name='listarock'),
-path('listaeletronica', views.listaeletronica, name='listaeletronica'),
-path('listareggae', views.listareggae, name='listareggae'),
-path('listahhrap', views.listahhrap, name='listahhrap'),
-path('listasoundtrack', views.listasoundtrack, name='listasoundtrack')
+    path('listarock', views.listarock, name='listarock'),
+    path('listaeletronica', views.listaeletronica, name='listaeletronica'),
+    path('listareggae', views.listareggae, name='listareggae'),
+    path('listahhrap', views.listahhrap, name='listahhrap'),
+    path('listasoundtrack', views.listasoundtrack, name='listasoundtrack')
 ]

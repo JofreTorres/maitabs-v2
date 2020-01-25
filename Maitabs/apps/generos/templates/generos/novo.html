@@ -1,0 +1,18 @@
+<h1>Novo Gênero</h1>
+
+<form method="post" action="criar" novalidate>
+  {% csrf_token %}
+
+  {{ form.as_p }}
+
+  <button type="submit">Salvar</button>
+
+</form>
+
+<div class="text-danger">
+  {% for field, errors in form.errors.items %}
+    {% for error in errors %}
+      {{ error}}
+    {% endfor %}
+  {% endfor %}
+</div>
