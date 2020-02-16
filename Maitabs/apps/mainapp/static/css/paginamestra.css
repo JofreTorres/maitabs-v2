@@ -1,0 +1,39 @@
+body{
+    background-color: #4F4F4F;
+}
+
+header{
+    background-color: gray;
+}
+
+a:hover{
+    color: orange;
+}
+
+.caixa{
+    position: relative;
+    width: 1500px;
+}
+
+nav{
+    position: absolute;
+    top: 110px;
+    right: 110px;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+img{
+    width: 200px;
+}

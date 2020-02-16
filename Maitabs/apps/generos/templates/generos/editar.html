@@ -1,4 +1,13 @@
-<h1>Editar gênero</h1>
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/paginamestra.css' %}">
+</head>
+
+<h1>Editar Gênero</h1>
 
 <form method="post" action="{% url 'atualizar' id=genero.id %}" novalidate>
   {% csrf_token %}

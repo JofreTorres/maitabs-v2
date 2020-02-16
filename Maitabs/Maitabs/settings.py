@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     # APPS CUSTOMIZÁVEIS
     'apps.mainapp',
     'apps.generos',
+    'apps.artistas',
+    'apps.musicas',
+    'apps.albuns',
 ]
 
 MIDDLEWARE = [

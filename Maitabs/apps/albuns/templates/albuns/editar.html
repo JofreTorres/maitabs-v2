@@ -7,15 +7,12 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/paginamestra.css' %}">
 </head>
 
-<h1>Novo Gênero</h1>
+<h1>Editar Álbum</h1>
 
-<form method="post" action="criar" novalidate>
+<form method="post" action="{% url 'atualizar' id=album.id %}" novalidate>
   {% csrf_token %}
-
   {{ form.as_p }}
-
   <button type="submit">Salvar</button>
-
 </form>
 
 <div class="text-danger">

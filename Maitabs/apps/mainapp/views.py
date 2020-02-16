@@ -1,15 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-from .models import Musica
-
-def musicasdodb(request):
-    musicas = Musica.objects.all()
-
-    dados = {
-        'musicas' : musicas
-    }
-    return render (request, 'listademusicas.html', dados)
 
 def home(request):
     template = loader.get_template('mainapp/home.html')
