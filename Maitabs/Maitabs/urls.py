@@ -26,4 +26,5 @@ urlpatterns = [
     path('musicas/', include('apps.musicas.urls')),
     path('albuns/', include('apps.albuns.urls')),
     path('contas/', include('apps.contas.urls')),
+    path('busca/', include('apps.busca.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

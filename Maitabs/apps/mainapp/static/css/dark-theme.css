@@ -1,0 +1,91 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+body {
+  background-color: rgb(1, 1, 2);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: .015em;
+  color: #b3b3b3;
+  text-transform: none;
+}
+
+a {
+  text-decoration: none;
+  color: #b3b3b3;
+
+  webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: .2s;
+  transition-duration: .2s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.main {
+  display: flex;
+}
+
+.main .sidebar {
+  width: 20%;
+}
+
+.main .sidebar .menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.main .sidebar .menu a {
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.main .content {
+  width: 80%;
+  background-color: #121212;
+}
+
+.music-list .music-row {
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: .2s;
+  transition-duration: .2s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 8px 20px;
+}
+
+.music-list .music-row:hover {
+  background-color: hsla(0,0%,100%,.1);
+}
+
+.music-list .music-row .music-name {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: .015em;
+  color: #fff;
+}
+
+.music-list .music-row .artist-name {
+  color: #fff;
+  opacity: .6;
+  -webkit-transition: opacity .2s linear;
+  transition: opacity .2s linear;
+  font-size: 12px;
+}
+
+.music-list .music-row .artist-name:hover {
+  text-decoration: underline;
+  opacity: 1;
+}

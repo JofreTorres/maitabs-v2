@@ -1,0 +1,20 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="music-list">
+  {% for musica in musicas %}
+
+  <div class="music-row">
+
+    <a href="#" class="music-name">{{ musica.nome }}</a>
+    <br>
+    <a href="#" class="artist-name">{{ musica.artista.nome }}</a> · <a href="#" class="artist-name">{{ musica.album.nome }}</a>
+
+  </div>
+
+  {% endfor %}
+</div>
+
+{% endblock %}

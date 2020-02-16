@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'apps.artistas',
     'apps.musicas',
     'apps.albuns',
-    'apps.contas'
+    'apps.contas',
+    'apps.busca',
 ]
 
 MIDDLEWARE = [
