@@ -14,7 +14,7 @@
   <div class="text-danger">
     {{ genero.nome }}
 
-    <a href="{% url 'editar' id=genero.id %}">Editar</a>
+    <a href="{% url 'generos_editar' id=genero.id %}">Editar</a>
 
     <form action="{% url 'deletar' id=genero.id %}" method="post">
         {% csrf_token %}
@@ -24,4 +24,4 @@
 
 {% endfor %}
 
-<a href="{% url 'novo' %}">Novo gênero</a>
+<a href="{% url 'generos_novo' %}">Novo gênero</a>

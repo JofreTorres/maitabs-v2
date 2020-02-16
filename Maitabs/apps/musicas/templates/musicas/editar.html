@@ -9,7 +9,7 @@
 
 <h1>Editar Música</h1>
 
-<form method="post" action="{% url 'atualizar' id=musica.id %}" novalidate>
+<form method="post" action="{% url 'musicas_atualizar' id=musica.id %}" novalidate>
   {% csrf_token %}
   {{ form.as_p }}
   <button type="submit">Salvar</button>

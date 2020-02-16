@@ -9,7 +9,7 @@
 
 <h1>Novo Gênero</h1>
 
-<form method="post" action="criar" novalidate>
+<form method="post" action="{% url 'generos_criar' %}" novalidate>
   {% csrf_token %}
 
   {{ form.as_p }}

@@ -9,7 +9,7 @@
 
 <h1>Editar Artista</h1>
 
-<form method="post" action="{% url 'atualizar' id=artista.id %}" novalidate>
+<form method="post" action="{% url 'artistas_atualizar' id=artista.id %}" novalidate>
   {% csrf_token %}
   {{ form.as_p }}
   <button type="submit">Salvar</button>

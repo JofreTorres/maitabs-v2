@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'apps.artistas',
     'apps.musicas',
     'apps.albuns',
+    'apps.contas'
 ]
 
 MIDDLEWARE = [
@@ -84,8 +85,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'maitabs_db',
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'USER': 'felipe',
+        'PASSWORD': 'k-olho_1108',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
         'OPTIONS': {

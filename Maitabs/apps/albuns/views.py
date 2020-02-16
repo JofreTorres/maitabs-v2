@@ -30,7 +30,7 @@ def criar(request):
 
     if form.is_valid():
         form.save()
-        return redirect('index')
+        return redirect('albuns_index')
 
     context = {
         'form': form
@@ -59,7 +59,7 @@ def atualizar(request, id):
 
     if form.is_valid():
         form.save()
-        return redirect('index')
+        return redirect('albuns_index')
 
     context = {
         'form': form
@@ -71,7 +71,4 @@ def atualizar(request, id):
 def deletar(request, id):
     album = Album.objects.get(pk=id)
     album.delete()
-    return redirect('index')
-
-
-
+    return redirect('albuns_index')
