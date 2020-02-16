@@ -1,11 +1,7 @@
+{% extends 'mainapp/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Maitabs</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/paginamestra.css' %}">
-</head>
+
+{% block content %}
 
 <h1>Novo Álbum</h1>
 
@@ -25,3 +21,6 @@
     {% endfor %}
   {% endfor %}
 </div>
+
+
+{% endblock %}

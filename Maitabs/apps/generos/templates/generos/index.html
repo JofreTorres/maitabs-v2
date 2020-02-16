@@ -1,11 +1,7 @@
+{% extends 'mainapp/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Title of the document</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/paginamestra.css' %}">
-</head>
+
+{% block content %}
 
 <h1>Gêneros</h1>
 
@@ -25,3 +21,5 @@
 {% endfor %}
 
 <a href="{% url 'generos_novo' %}">Novo gênero</a>
+
+{% endblock %}

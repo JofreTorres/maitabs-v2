@@ -1,0 +1,36 @@
+{% load static %}
+<html>
+    <head>
+        <title>Maitabs</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+       <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+       <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+       {% block css %}
+       {% endblock %}
+    </head>
+    <body>
+      <header>
+        <div class='caixa'>
+            <h1><img src="{% static 'img/guitar.jpg' %}"></h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'listademusicas' %}">Lista de Músicas</a></li>
+                    <li><a href='contato.html'>Contato</a></li>
+                    <li><a href="{% url 'teladelogin' %}">Login</a></li>
+                    <li><a href="{% url 'profile' %}">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+      </header>
+        <div class="page-header">
+            <h1><a href="/">Maitabs - O lugar de todo conteúdo para aprender música.</a></h1>
+        </div>
+
+        <div class="content container">
+          {% block content %}
+          {% endblock %}
+        </div>
+    </body>
+</html>

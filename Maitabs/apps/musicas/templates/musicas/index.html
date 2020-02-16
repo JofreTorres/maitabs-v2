@@ -1,12 +1,12 @@
+{% extends 'mainapp/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Title of the document</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/paginamestra.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/listagemmusicas.css' %}">
-</head>
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/paginamestra.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/listagemmusicas.css' %}">
+{% endblock %}
+
+{% block content %}
 
 <h1>Lista de Músicas</h1>
  {% for musica in musicas %}
@@ -41,3 +41,8 @@
 {% endfor %}
 
 <a href="{% url 'musicas_novo' %}">Nova musica</a>
+
+{% endblock %}
+
+
+{% load static %}
