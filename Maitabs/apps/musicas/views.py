@@ -30,13 +30,15 @@ def criar(request):
 
     if form.is_valid():
         form.save()
-        return redirect('index')
+        return redirect('musicas_index')
+    else:
+        template = loader.get_template('musicas/novo.html')
 
-    context = {
-        'form': form
-    }
+        context = {
+            'form': form
+        }
 
-    return render(request, context)
+        return HttpResponse(template.render(context, request))
 
 
 def editar(request, id):
@@ -59,7 +61,7 @@ def atualizar(request, id):
 
     if form.is_valid():
         form.save()
-        return redirect('index')
+        return redirect('musicas_index')
 
     context = {
         'form': form
@@ -71,7 +73,7 @@ def atualizar(request, id):
 def deletar(request, id):
     musica = Musica.objects.get(pk=id)
     musica.delete()
-    return redirect('index')
+    return redirect('musicas_index')
 
 
 

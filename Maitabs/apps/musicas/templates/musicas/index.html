@@ -32,7 +32,7 @@
 
     <a href="{% url 'musicas_editar' id=musica.id %}">Editar</a>
 
-    <form action="{% url 'deletar' id=musica.id %}" method="post">
+    <form action="{% url 'musicas_deletar' id=musica.id %}" method="post">
         {% csrf_token %}
         <input type="submit" value="Deletar" />
     </form>
