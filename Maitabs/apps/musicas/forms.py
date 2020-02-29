@@ -4,4 +4,4 @@ from .models import Musica
 class MusicaForm(ModelForm):
     class Meta:
         model = Musica
-        fields = '__all__'
+        exclude = ['slug']

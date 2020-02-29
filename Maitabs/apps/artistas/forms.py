@@ -4,4 +4,4 @@ from .models import Artista
 class ArtistaForm(ModelForm):
     class Meta:
         model = Artista
-        fields = '__all__'
+        exclude = ['slug']
