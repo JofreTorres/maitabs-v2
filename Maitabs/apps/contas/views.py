@@ -20,9 +20,6 @@ def nova(request):
 
         user = User.objects.create_user(user_name, user_email, user_password)
 
-        print('user created!')
-        print(user.name)
-
         return redirect('contas_index')
     else:
         template = loader.get_template('contas/nova.html')

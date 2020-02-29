@@ -84,15 +84,12 @@ WSGI_APPLICATION = 'Maitabs.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'maitabs_db',
-        'USER': 'felipe',
-        'PASSWORD': 'k-olho_1108',
+        'USER': os.environ.get('DB_USER', 'root'),
+        'PASSWORD': os.environ.get('DB_PASS', 'root'),
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
-        'OPTIONS': {
-            "init_command": "SET foreign_key_checks = 0;",
-         },
+        'PORT': '5432'
     }
 }
 
