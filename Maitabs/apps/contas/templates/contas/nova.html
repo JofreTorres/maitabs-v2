@@ -1,0 +1,30 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>Registrar</h1>
+
+<form class="" method="post">
+  {% csrf_token %}
+
+  <div class="">
+    <label for="">Nome: </label>
+    <input type="text" name="user_name" value="">
+  </div>
+
+  <div class="">
+    <label for="">Email: </label>
+    <input type="text" name="user_email" value="">
+  </div>
+
+  <div class="">
+    <label for="">Senha: </label>
+    <input type="password" name="user_password" value="">
+  </div>
+
+  <button type="submit" name="btn_submit">Criar conta</button>
+
+</form>
+
+{% endblock %}

@@ -22,6 +22,12 @@
               <a href="{% url 'musicas_index' %}">Músicas</a>
               <a href="{% url 'artistas_index' %}">Artistas</a>
               <a href="{% url 'generos_index' %}">Gêneros</a>
+
+              {% if user.is_authenticated %}
+              <a href="{% url 'contas_logout' %}">Logout</a>
+              {% else %}
+              <a href="{% url 'contas_login' %}">Login</a>
+              {% endif %}
           </div>
 
         </div>
